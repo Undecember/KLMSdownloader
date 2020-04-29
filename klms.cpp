@@ -25,6 +25,7 @@ int main(void)
         wchar_t name[512], rtmp[512];
         nl.getline(name, 512);
         if (name[wcslen(name) - 1] == L'\n') name[wcslen(name) - 1] = 0;
+        if (name == L"") continue;
         rl.getline(rtmp, 512);
         if (rtmp[wcslen(rtmp) - 1] == L'\n') rtmp[wcslen(rtmp) - 1] = 0;
         wchar_t cmd[1024] = L"";
